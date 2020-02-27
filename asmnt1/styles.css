@@ -1,4 +1,28 @@
-.header img{
-    
+.header {
+    background-color: #0072AB;
+    color: #FFF854;
+}
 
+.wrapper {
+    display: flex;
+    justify-content: center    
+}
+.content {
+    max-width: 960px;
+    
+}
+
+.abtme {
+    display: flex;
+    max-width: 33%;    
+}
+
+.abtme img {
+    border: 1px solid;
+    
+}
+
+.mywork {
+    display: flex;
+    max-width: 66%;   
 }
