@@ -1,28 +1,129 @@
+/*
+COLORS
+#AB1A28 - dark red
+#FFF854 - yellow
+#F70C24 - bright red
+rgb(130, 192, 223) - light blue
+#0072AB - dark blue
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(130, 192, 223);
+    font-family: Candara;
+}
+
+h1, h2 {
+    font-family: 'Slackey';
+}
+
+h1 {
+    text-shadow: 3px 2px #AB1A28;
+    font-size: xxx-large;
+}
+
+h2 {
+    color: rgb(224, 12, 34);
+    text-shadow: 2px 2px #FFF854;
+    font-size: xx-large;
+    margin: 10px;
+}
+
+h3 {
+    margin: 7px;
+}
+
 .header {
-    background-color: #0072AB;
+    background-color: #0072ab;
     color: #FFF854;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 15;
+}
+
+.header img {
+    margin: 10px;
+    height: 200px;
+    width: 200px;
 }
 
 .wrapper {
     display: flex;
-    justify-content: center    
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
 }
+
 .content {
+    display: flex;
     max-width: 960px;
-    
+    min-height: 100%;
+    align-items: left-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.abtme {
+.bio {
     display: flex;
-    max-width: 33%;    
+    flex-direction: column;
+    width: 175px; /* max-width: 33% no good? */   
+    flex: 0 1 auto;
+    margin-right: 15px;
 }
 
-.abtme img {
-    border: 1px solid;
-    
+.bio img {
+    width: inherit;
+    border: 1px solid #F70C24;
+    border-radius: 4px;
 }
 
-.mywork {
-    display: flex;
-    max-width: 66%;   
+.bio p {
+    background-color: #bfdfef;
+    padding: 5px;
+}
+
+.work {
+    display: flex;   
+    flex: 0 2 auto;
+    border-radius: 4px;
+    flex-direction: column;
+    background-color: #bfdfef;
+    padding: 15px;
+}
+
+
+
+
+/* in all cases where screen is less than 1000px, these rules have precedence */
+@media screen and (max-width: 1000px) {
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+.content {
+justify-content: center;
+flex-direction: row;
+}
+
+.bio {
+display: flex;
+flex-direction: row;
+flex: 0 1 auto; /* necessary? you can only use 1 unit of flexibility */
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+margin-right: 15px;
+margin-bottom: 15px;
+}
+
 }
