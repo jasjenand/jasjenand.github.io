@@ -46,15 +46,15 @@
         //add new line
         let brk = document.createElement("br");
         p2.appendChild(brk);
-        let last3 = document.createElement("p");
-        let node3 = document.createTextNode("ine")
-        last3.appendChild(node3);
-        p2.appendChild(last3)
+        let node3 = document.createTextNode("ine");
+        p2.appendChild(node3);
 
+        document.getElementById("p1").className = "one";
+        document.getElementById("p2").className = "two";
 
-        document.getElementById("p1").className = "first";
-        document.getElementById("p2").className = "second";
-        
+        let name = "Jasmine Anderson";
+        let first = name.substring(0,7);
+        let last = name.substring(8,16);
       }
     </script>
   </body>
