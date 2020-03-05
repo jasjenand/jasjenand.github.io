@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jasmine's Lab 4</title>
+    <title>Prof A's Demo Page</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
 
   <body>
     <div class="container">
       <div class="wrapper">
-        <div class="header">Jasmine's Lab 4</div>
+        <div class="header">Prof A's Demo Page</div>
         <button class="button" onclick="clickMe()">
           Click me to make a change
         </button>
@@ -26,8 +26,35 @@
     </div>
     <script>
       function clickMe() {
+        const header = document.querySelector(".header");
+        header.innerHTML = "Jasmine's Lab 4";
+
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
+
+        let p1 = document.createElement("p");
+        let node1 = document.createTextNode("My name has 7 characters.");
+        p1.appendChild(node1);
+        content.appendChild(p1);
+
+
+        let p2 = document.createElement("p");
+        let node2 = document.createTextNode("The third character in my name is S.");
+        p2.appendChild(node2);
+        content.appendChild(p2);
+        
+        //add new line
+        let brk = document.createElement("br");
+        p2.appendChild(brk);
+        let last3 = document.createElement("p");
+        let node3 = document.createTextNode("ine")
+        last3.appendChild(node3);
+        p2.appendChild(last3)
+
+
+        document.getElementById("p1").className = "first";
+        document.getElementById("p2").className = "second";
+        
       }
     </script>
   </body>
