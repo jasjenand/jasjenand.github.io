@@ -274,8 +274,10 @@
 
       let mylist = document.createElement("ol");
         for (var i = 0; i < 25; i++) {
+          let country = countries[Math.floor(Math.random()*countries.length << 0)]
+          
           let item = document.createElement("li");
-          let node = document.createTextNode(countries[Math.floor(Math.random()*countries.length)].name);
+          let node = document.createTextNode(country.code +" "+ country.name);
           item.appendChild(node);
           mylist.appendChild(item);
           content.appendChild(mylist);
