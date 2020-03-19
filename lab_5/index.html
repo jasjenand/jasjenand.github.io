@@ -10,10 +10,10 @@
   <div class="container">
     <div class="wrapper">
       <div class="header">Jasmine's List of Countries</div>
-      <button class="activate">Click me to replace list
+      <button class="activate" onclick="clickMe()">Click me to replace list
         entries</button>
       <div class="content">
-
+        
       </div>
       <div class="footer"></div>
     </div>
@@ -267,8 +267,30 @@
     ]
     console.log("List of countries in the world", countries);
     countries[i].code
+
+    const range = n => {
+      let arr = [];
+      for (let i = 0; i < n; i++) {
+        arr[i] = i;
+      }
+      return arr;
+    }
+
     let mylist = document.querySelector("ol");
-    mylist.className += "countries";
+
+    function clickMe() {
+      const content = document.querySelector(".content");
+
+      let mylist = range(25);
+      const newlist = mylist.map(m => {
+        return `$
+        {countrySelection.code}$
+        {countrySelection.code}`;
+      });
+      content.innerHTML = mylist;
+
+
+    }
   </script>
 </body>
 
