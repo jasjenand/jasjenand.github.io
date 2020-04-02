@@ -61,38 +61,17 @@
       const str1 = "Eppley Recreation Center";
       eppley.bindPopup(str1).openPopup();
 
-      
-      /*
-          const obj = {
-            name: "my diner",
-            subObj: {
-              lat: 51,
-              long: 0.09
-            },
-            other: "cats"
-          };
-          obj.subObj.long //get objects from objects; gotta know the structure
+      let pgpins = [
+        [39.104816, -76.845427],
+        [38.790243, -77.013524],
+        [38.962975, -76.788294]
+      ];
 
-          const obj2 = {
-            name: "my diner",
-            subObj: {
-              lat: 51,
-              long: 0.09
-            },
-            arr: [
-            {
-              lat: 51,
-              long: 0.09
-            },
-            {
-              lat: 51,
-              long: 0.09
-            }
-            ],
-            other: "cats"
-          };
-          obj2.arr[0].long
-          */
+      pgpins.forEach(function(pin) {
+        L.marker(pin).addTo(mymap);
+      });
+
+
     </script>
   </body>
 </html>
