@@ -19,6 +19,16 @@
         height: 480px;
         width: 640px;
       }
+      .leaflet-popup {
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+      .leaflet-popup-content-wrapper,
+      .leaflet-popup-tip {
+       	background: cornflowerblue;
+      	color: azure;
+	    }
+
     </style>
   </head>
 
@@ -33,7 +43,7 @@
       </div>
     </div>
     <script>
-        const mymap = L.map("map1").setView([51.505, -0.09], 13);
+        const mymap = L.map("map1").setView([38.99, -76.945], 15);
 
         L.tileLayer(
           'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
@@ -47,9 +57,9 @@
             accessToken: 'pk.eyJ1IjoiamFzYW5kIiwiYSI6ImNrOGo5bXBhMzAwOXIzbXFhaWpwcWlwZW8ifQ.mOpy1U8a1uDDlKrBrm4k1Q'
           }
       ).addTo(mymap);
-      const pin1 = L.marker([51.5, -0.13]).addTo(mymap);
-      const str1 = "<b>Hello world!</b><br>I am a popup.";
-      pin1.bindPopup(str1).openPopup();
+      const eppley = L.marker([38.9936,-76.9453]).addTo(mymap);
+      const str1 = "Eppley Recreation Center";
+      eppley.bindPopup(str1).openPopup();
 
       
       /*
