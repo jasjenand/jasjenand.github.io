@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Forms Lab</title>
+    <link rel="stylesheet" type="text/css" href="form_styles.css" />
   </head>
   <body>
 
@@ -11,14 +12,13 @@
           <h1>HTML 1 Forms Lab</h1>
           
           <form action="https://nameless-thicket-21836.herokuapp.com/lab" method="post">
-            <label for="power">Superpower of Choice?</label>
-            <input type="text", id="power", name="user_choice", maxlength="140">
+            <label for="power">Superpower of Choice?</label><br>
+            <input type="text", id="power", name="user_choice", maxlength="140"><br>
 
-            <label for="why">Explain why you didn't choose teleportation:</label>
-            <textarea rows="5", cols="33", id="why", name="user_reason">
-              If you correctly answered teleportation, congratulations!
-              You may skip this step.
-            </textarea>
+            <label for="why">Why didn't you choose teleportation?</label><br>
+            <textarea rows="5", cols="33", id="why", name="user_reason">If you correctly answered teleportation, congratulations! You may skip this step.</textarea>
+            <!-- can i break up this line without changing the front end? ^ -->
+            <br>
             <button type="submit">Submit</button>
           </form>
 
