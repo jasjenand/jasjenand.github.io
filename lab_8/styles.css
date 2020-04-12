@@ -73,7 +73,11 @@ h3 {
   padding: 10px;
   overflow-wrap: break-word;
   margin: 25px 50px;
-  height: auto;
+}
+
+#chartContainer {
+  height: 300px;
+  width: 100%;
 }
 
 .activate {
