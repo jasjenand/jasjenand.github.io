@@ -28,15 +28,12 @@
             latLong: m.geocoded_column_1.coordinates,
           }));
           return refined;
-           // <- this will pass the data to the next "then" statement when I'm ready.
         })
         .then((data) => {
           return data.reduce((result, current) => {
             current.category;
             if (!result[current.category]) {
-                    //c.categories.push(current.category)
               result[current.category] = [];
-                    //{"Carry-out":[]}
             }
             result[current.category].push(current);
             return result;

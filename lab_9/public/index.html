@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Jasmine Anderson Lab 9</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">Jasmine Anderson Lab 9</div>
+      <div class="content">
+        <div id="chartContainer"></div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </div>
+  <script>
+    fetch('/api') // Rather than fetching from PG County, we're going to fetch from our own server.
+      .then(res => res.json())
+      .then(res => {
+        // Here's where your chart code should go.
+        console.log(results);
+        return results;
+      })
+      .then(results => {
+        const chart = new CanvasJS.Chart("chartContainer", {
+          animationEnabled: true,
+          title: {
+            text: "Let's Find Somewhere To Eat",
+          },
+          axisX: {
+            labelFontSize: 8,
+            margin: 10,
+            interval: 1,
+          },
+          axisY: {
+            scaleBreaks: {
+              customBreaks:[
+                {
+                  startValue: 20,
+                  endValue: -35,
+                },
+                {
+                  startValue: 60,
+                  endValue: 120,
+                },
+                {
+                  startValue: 160,
+                  endValue: 220,
+                }]}
+          },
+          data: [
+            {
+              type: "bar",
+              dataPoints: results
+            },
+          ],
+        });
+        chart.render();
+      })
+    }) // y r u..
+  </script>
+</body>
+
+</html>
