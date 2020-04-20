@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // These are our required libraries to make the server work.
 // We're including a server-side version of Fetch to build on your client-side work
 const express = require('express');
@@ -20,7 +21,6 @@ app.use(express.json());
 app.use(express.static('public'));
 
 
-
 function processDataForFrontEnd(req, res) {
   const baseURL = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
 
@@ -28,17 +28,38 @@ function processDataForFrontEnd(req, res) {
   // Note that at no point do you "return" anything from this function -
   // it instead handles returning data to your front end at line 34.
     fetch(baseURL)
-      .then((r) => r.json())
+      .then((results) => results.json())
 
+      .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
+          console.log(data);
+          const clearEmptyData = data.filter((f) => f.geocoded_column_1);
+          const refined = clearEmptyData.map((m) => ({
+            category: m.category,
+            name: m.name,
+            latLong: m.geocoded_column_1.coordinates,
+          }));
+          return refined;
+      })
       .then((data) => {
-        return data.reduce((res, current) => {
+        return data.reduce((result, current) => {
           current.category;
-          if (!res[current.category]) {
-            res[current.category] = [];
+          if (!result[current.category]) {
+            result[current.category] = [];
           }
-          res[current.category].push(current);
-          return res;
+          result[current.category].push(current);
+          return result;
         }, {});
+      })
+      .then((data) => {
+        console.log('new data', data);
+        const reformattedData = Object.entries(data).map((m,i) => {
+          console.log(m);
+          return {
+            y: m[1].length,
+            label: m[0],
+          };
+        });
+        return reformattedData;
       }) //from lab 8
 
       .then((data) => {
