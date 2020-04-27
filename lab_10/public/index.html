@@ -22,6 +22,7 @@
             </textarea
             ><br />
             <button id="formBtn">Submit</button>
+            <button id="getBtn">Send GET Request</button>
           </form>
         </div>
       </div>
@@ -35,7 +36,7 @@
         const formToSend = new FormData(target);
 
         fetch("/api", {
-          method: "POST",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
@@ -51,8 +52,28 @@
           });
       }
 
+      function sendGet(e) {
+        e.preventDefault();
+        const btn = document.querySelector("#getBtn");
+        fetch("/api", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          }
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            console.log(res);
+          });
+
+
+      }
+
       const formBtn = document.querySelector("#formBtn");
       formBtn.addEventListener("click", sendForm);
+    
+      const getBtn = document.querySelector("#getBtn");
+      formBtn.addEventListener("click", sendGet);
     </script>
   </body>
 </html>

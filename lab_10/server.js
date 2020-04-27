@@ -80,7 +80,7 @@ app
       writeUser(req.body.name, dbSettings)
       .then((result) => {
         console.log(result);
-        res.send("your request was successful"); // simple mode
+        res.send("In the eloquent words of Jacques Webster II, 'It's lit!'"); // simple mode
       })
       .catch((err) => {
         console.log(err);
