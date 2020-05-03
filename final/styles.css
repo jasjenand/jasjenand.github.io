@@ -1,0 +1,247 @@
+/***************************/
+/* COLORS:
+/* -- light-green: #69FFA9
+/* -- slightly darker green: #34B36B
+/* -- dark pink: #FF877D
+/* -- light pink: #FF9F96
+/* -- reddish: #B34E46
+/****************************/
+
+body {
+    width: 100%;
+    /*max-width: 960px;*/
+    background-color: #96FF7A;
+    margin: 0 auto;
+    font-family: josefin-sans, sans-serif;
+    margin-bottom: 30px;
+}
+
+.nav-bar {
+    width: 100%; /* ensures that the nav takes up the whole body width */
+    height: 75px;
+    margin: 0 0; /* provides top and bottom margin space */
+    padding-bottom: 1px;
+    padding-top: 1px;
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    background-color: #2C661D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-nav a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px;
+}
+.main-nav a:hover {
+    text-decoration: underline;
+}
+.main-nav a:active {
+    color: #B30091;
+}
+
+
+.main-heading {
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/************************/
+/* Style for Index Page */
+/************************/
+
+.find {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+}
+
+.find-box {
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    border-style: double;
+    margin-right: 15px;
+}
+
+.map-box {
+    width: 675px;
+    height: 600px;
+    background-color: white;
+    border-style: double;
+    margin-left: 15px;
+}
+
+.custom .leaflet-popup-tip, 
+.custom .leaflet-popup-content-wrapper {
+  background: white;;
+  color: black;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/************************/
+/* Style for About Page */
+/************************/
+
+#about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.overview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.problem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+}
+
+.approach {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+}
+
+.problem-box {
+    width: 450px;
+    height: 250px;
+    background-color: white;
+    border-style: none;
+}
+
+.approach-box {
+    width: 450px;
+    height: 250px;
+    background-color: white;
+    border-style: none;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+figure img {
+    max-width: 40%;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 10px solid lightgray;
+    width: 800px;
+    color: lightgray;
+    border-color: lightgray;
+}
+
+/********************************/
+/* Style for Documentation Page */
+/********************************/
+
+#documentation-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/**************************/
+/* Style for Profile Page */
+/**************************/
+
+.market-name {
+    text-align: center;
+}
+
+#profile-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.characteristics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.characteristics-box {
+    background-color: lightgray;
+    width: 400px;
+    height: 600px;
+}
+
+.where-when {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-map {
+    width: 400px;
+    height: 150px;
+    background-color: lightgray;
+}
+
+.profile-hours {
+    width: 300px;
+    height: 350px;
+    background-color: lightgray;
+}

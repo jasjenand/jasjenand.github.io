@@ -66,7 +66,7 @@ app
         res.send("your request was successful"); // simple mode
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err);-
       });
     }
   })
